@@ -1,0 +1,34 @@
+[3m[1m[34m≈[39m[22m[23m tailwindcss [34mv4.2.1[39m
+
+[34m│[39m ↳ Upgrading from Tailwind CSS [2m[34m`[39m[22m[34mv4.2.1[39m[2m[34m`[39m[22m 
+
+[34m│[39m Searching for CSS files in the current directory and its subdirectories… 
+
+[34m│[39m Migrating stylesheets… 
+
+[31m│[39m ↳ Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive in [2m[34m`[39m[22m[34m.\src\index.css[39m[2m[34m`[39m[22m 
+
+[32m│[39m ↳ Migrated stylesheet: [2m[34m`[39m[22m[34m.\src\index.css[39m[2m[34m`[39m[22m 
+
+[34m│[39m Updating dependencies… 
+
+[31m│[39m ↳ An error occurred while running `bun add tailwindcss@latest @tailwindcss/postcss@latest` 
+[31m│[39m    
+[31m│[39m    
+[31m│[39m   'bun'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ� 
+[31m│[39m   ��ġ ������ �ƴմϴ�. 
+[31m│[39m    
+
+[34m│[39m Migrating templates… 
+
+Error: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    at onInvalidCandidate (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:21:1314)
+    at $e (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:16:37066)
+    at file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:21:355
+    at Ar (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:3:1733)
+    at I (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:3:1377)
+    at Ce (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:21:172)
+    at Gi (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:38:294)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ao (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/tailwindcss/dist/chunk-L5IEUH3R.mjs:38:631)
+    at async su (file:///C:/Users/dbcdk/AppData/Local/npm-cache/_npx/234afcd4ab2f5775/node_modules/@tailwindcss/node/dist/index.mjs:10:3390)
