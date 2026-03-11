@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saju Customer Management List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E67E22",
+                        "primary-hover": "#D35400",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "sidebar-bg": "#1A2B3C",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-main": "#1A2B3C",
+                        "text-muted": "#64748B",
+                        "border-color": "#E2E8F0",
+                        "table-header": "#F1F5F9"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-slate-100 font-display min-h-screen antialiased">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Sidebar -->
+<div class="flex flex-col w-64 bg-sidebar-bg flex-shrink-0 h-full overflow-y-auto">
+<div class="flex items-center gap-3 p-6 mb-4">
+<div class="bg-primary rounded-lg size-10 flex items-center justify-center flex-shrink-0 shadow-sm" data-alt="Saju Report Logo">
+<span class="material-symbols-outlined text-white text-xl">insights</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<h1 class="text-white text-lg font-bold leading-tight truncate">Saju Report</h1>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-wider truncate">Automation</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/20 text-white relative" href="#">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-primary rounded-r-full"></div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="text-sm font-medium">Customers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">description</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">help</span>
+<span class="text-sm font-medium">Help &amp; Support</span>
+</a>
+<div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-3 px-3">
+<div class="size-8 rounded-full bg-slate-700 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    AD
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-medium text-white truncate">Admin User</span>
+<span class="text-xs text-slate-400 truncate">admin@saju.io</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-y-auto">
+<div class="max-w-[1520px] w-full mx-auto p-8 flex-1 flex flex-col">
+<!-- Header -->
+<header class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-3xl font-black text-text-main dark:text-white tracking-tight">Customer Management</h2>
+<p class="text-text-muted dark:text-slate-400 mt-1 text-sm">Manage and view your report automation clients.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Register New Customer
+                </button>
+</header>
+<!-- Content Card -->
+<div class="bg-surface-light dark:bg-surface-dark border border-border-color dark:border-slate-800 rounded-xl shadow-sm flex flex-col flex-1 min-h-[500px] overflow-hidden">
+<!-- Search & Filters -->
+<div class="p-5 border-b border-border-color dark:border-slate-800 flex items-center gap-4">
+<div class="relative flex-1 max-w-md">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-border-color dark:border-slate-700 rounded-lg leading-5 bg-background-light dark:bg-slate-900 text-text-main dark:text-slate-100 placeholder-text-muted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors" placeholder="Search customers by name, location..." type="text"/>
+</div>
+<button class="flex items-center gap-2 px-3 py-2 border border-border-color dark:border-slate-700 rounded-lg text-sm font-medium text-text-main dark:text-slate-200 hover:bg-background-light dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filters
+                    </button>
+</div>
+<!-- Table Container -->
+<div class="flex-1 overflow-x-auto @container">
+<table class="min-w-full divide-y divide-border-color dark:divide-slate-800 table-fixed">
+<thead class="bg-table-header dark:bg-slate-800/50">
+<tr>
+<th class="px-6 py-4 text-left text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/4" scope="col">Name</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/12" scope="col">Gender</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/6" scope="col">Birth Date</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/6" scope="col">Birth Place</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/6" scope="col">Registration Date</th>
+<th class="px-6 py-4 text-right text-xs font-bold text-text-main dark:text-slate-300 uppercase tracking-wider w-1/12" scope="col">Action</th>
+</tr>
+</thead>
+<tbody class="bg-surface-light dark:bg-surface-dark divide-y divide-border-color dark:divide-slate-800">
+<!-- Row 1 -->
+<tr class="hover:bg-background-light/50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="size-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 flex items-center justify-center font-bold text-sm mr-3">JD</div>
+<div class="text-sm font-semibold text-text-main dark:text-slate-200">John Doe</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Male</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">1985-04-12</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">New York, NY</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">2023-01-15</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-primary hover:text-primary-hover opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-background-light/50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="size-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold text-sm mr-3">JS</div>
+<div class="text-sm font-semibold text-text-main dark:text-slate-200">Jane Smith</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Female</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">1990-08-24</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">London, UK</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">2023-02-01</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-primary hover:text-primary-hover opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-background-light/50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="size-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 flex items-center justify-center font-bold text-sm mr-3">MJ</div>
+<div class="text-sm font-semibold text-text-main dark:text-slate-200">Michael Johnson</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Male</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">1978-11-03</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Chicago, IL</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">2023-02-18</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-primary hover:text-primary-hover opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-background-light/50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="size-8 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400 flex items-center justify-center font-bold text-sm mr-3">ED</div>
+<div class="text-sm font-semibold text-text-main dark:text-slate-200">Emily Davis</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Female</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">1988-05-19</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Toronto, ON</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">2023-03-05</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-primary hover:text-primary-hover opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-background-light/50 dark:hover:bg-slate-800/30 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="size-8 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 flex items-center justify-center font-bold text-sm mr-3">DW</div>
+<div class="text-sm font-semibold text-text-main dark:text-slate-200">David Wilson</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Male</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">1992-09-30</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400">Sydney, NSW</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted dark:text-slate-400 font-mono">2023-03-22</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-primary hover:text-primary-hover opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination (Optional/Visual) -->
+<div class="p-4 border-t border-border-color dark:border-slate-800 flex items-center justify-between text-sm text-text-muted dark:text-slate-400 bg-background-light/50 dark:bg-slate-900/50">
+<span>Showing 1 to 5 of 42 customers</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 border border-border-color dark:border-slate-700 rounded text-slate-400 cursor-not-allowed">Prev</button>
+<button class="px-3 py-1 bg-primary text-white rounded">1</button>
+<button class="px-3 py-1 hover:bg-border-color dark:hover:bg-slate-800 rounded transition-colors">2</button>
+<button class="px-3 py-1 hover:bg-border-color dark:hover:bg-slate-800 rounded transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="px-2 py-1 border border-border-color dark:border-slate-700 rounded hover:bg-background-light dark:hover:bg-slate-800 transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

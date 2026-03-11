@@ -1,0 +1,153 @@
+﻿
+> vite_react_shadcn_ts@0.0.0 lint
+> eslint .
+
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\NormalizationResultPanel.tsx
+  9:11  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\case\AIGenerationTab.tsx
+   21:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   75:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\case\CaseLogicTab.tsx
+   20:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   21:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   74:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   91:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:16  error  Empty block statement                     no-empty
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\case\EditorTab.tsx
+  13:13  error    Unexpected any. Specify a different type                                                                        @typescript-eslint/no-explicit-any
+  73:6   warning  React Hook useEffect has a missing dependency: 'saveContent'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\case\PDFPublishTab.tsx
+  14:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\editor\EditorToolbar.tsx
+  20:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  21:53  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\public\PublicAnalysisViewer.tsx
+  12:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\HapChungPanel.tsx
+  8:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\IljinCalendar.tsx
+  56:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\OhengDistributionChart.tsx
+   9:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  27:64  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  28:64  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  32:16  error  Empty block statement                     no-empty
+  46:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  71:57  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\SajuHeroSection.tsx
+   9:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  35:14  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  36:14  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  40:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\SajuWongukCard.tsx
+   8:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  25:59  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  26:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\SinsalPanel.tsx
+  8:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\saju\TwelveUnseongPanel.tsx
+  8:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\badge.tsx
+  29:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\button.tsx
+  47:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\command.tsx
+  24:11  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\form.tsx
+  129:10  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\navigation-menu.tsx
+  111:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\sidebar.tsx
+  636:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\sonner.tsx
+  27:19  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\textarea.tsx
+  5:18  error  An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+C:\Users\dbcdk\Desktop\saju report automation\src\components\ui\toggle.tsx
+  37:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\contexts\AuthContext.tsx
+  113:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\dbcdk\Desktop\saju report automation\src\lib\sajuAnalysis.ts
+  14:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\pages\CaseDetail.tsx
+   41:6   warning  React Hook useEffect has a missing dependency: 'fetchCase'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  117:59  error    Unexpected any. Specify a different type                                                                      @typescript-eslint/no-explicit-any
+  219:63  error    Unexpected any. Specify a different type                                                                      @typescript-eslint/no-explicit-any
+  225:67  error    Unexpected any. Specify a different type                                                                      @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\pages\CustomerNew.tsx
+   56:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  120:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  153:15  error  Empty block statement                     no-empty
+  180:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\pages\Dashboard.tsx
+  137:60  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\pages\HistoryPage.tsx
+   14:36  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+   18:6   warning  React Hook useEffect has a missing dependency: 'fetchHistory'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   30:50  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+  137:61  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\pages\PublicSaju.tsx
+  12:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\services\aiGenerationService.ts
+   75:27  error  Empty block statement                     no-empty
+   83:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  144:27  error  Empty block statement                     no-empty
+  151:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\services\iljinCalendarService.ts
+  39:9   error  'todayYinYang' is never reassigned. Use 'const' instead  prefer-const
+  41:57  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  43:16  error  Empty block statement                                    no-empty
+
+C:\Users\dbcdk\Desktop\saju report automation\src\services\pdfService.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\dbcdk\Desktop\saju report automation\src\services\promptTemplates\deepAnalysis.ts
+  26:84  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\src\services\promptTemplates\index.ts
+  22:76  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\supabase\functions\generate-report\index.ts
+  60:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\dbcdk\Desktop\saju report automation\tailwind.config.ts
+  133:13  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+??71 problems (60 errors, 11 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Canvas & Surface */
+    --background: 36 30% 93%; /* #F5F1EA */
+    --background-subtle: 34 24% 89%; /* #EDE7DD */
+    --foreground: 224 36% 11%; /* #121826 */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 224 36% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 36% 11%;
+
+    --surface-secondary: 36 33% 97%; /* #FAF8F4 */
+    --surface-inverse: 220 40% 17%; /* #1A2540 */
+
+    /* Brand */
+    --primary: 218 43% 25%; /* #24385B */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 44% 19%; /* #1C2B47 */
+    --primary-active: 220 45% 15%; /* #162238 */
+
+    --secondary: 36 44% 50%; /* #B88746 */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-soft: 32 69% 89%; /* #F5E7D2 */
+
+    /* Muted / Accent */
+    --muted: 34 24% 89%;
+    --muted-foreground: 220 16% 35%; /* #475467 */
+
+    --accent: 34 24% 89%;
+    --accent-foreground: 218 43% 25%;
+
+    /* Semantic */
+    --destructive: 4 72% 42%; /* #B42318 */
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 4 93% 97%; /* #FEF3F2 */
+
+    --info: 217 80% 46%; /* #175CD3 */
+    --success: 174 78% 26%; /* #0F766E */
+    --warning: 28 92% 37%; /* #B45309 */
+
+    /* Border / Input */
+    --border: 34 16% 81%; /* #D8D2C7 */
+    --border-strong: 34 12% 62%; /* #A79F92 */
+    --input: 34 16% 81%;
+    --ring: 218 100% 77%; /* #8FB4FF */
+
+    /* Selection */
+    --selection: 220 80% 93%; /* #DCE8FF */
+
+    /* Text */
+    --text-primary: 224 36% 11%; /* #121826 */
+    --text-secondary: 220 16% 35%; /* #475467 */
+    --text-tertiary: 220 12% 46%; /* #667085 */
+    --text-inverse: 240 33% 99%; /* #FCFCFD */
+    --text-disabled: 218 14% 62%; /* #98A2B3 */
+
+    /* Radius */
+    --radius: 0.75rem; /* 12px base */
+    --radius-xs: 0.5rem; /* 8px */
+    --radius-sm: 0.75rem; /* 12px */
+    --radius-md: 1rem; /* 16px */
+    --radius-lg: 1.25rem; /* 20px */
+    --radius-xl: 1.5rem; /* 24px */
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 36% 11%;
+    --sidebar-primary: 218 43% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 34 24% 89%;
+    --sidebar-accent-foreground: 218 43% 25%;
+    --sidebar-border: 34 16% 81%;
+    --sidebar-ring: 218 100% 77%;
+  }
+
+  .dark {
+    --background: 220 40% 17%;
+    --background-subtle: 220 30% 12%;
+    --foreground: 240 33% 99%;
+    --card: 220 35% 14%;
+    --card-foreground: 240 33% 99%;
+    --popover: 220 35% 14%;
+    --popover-foreground: 240 33% 99%;
+    --primary: 218 100% 77%;
+    --primary-foreground: 220 40% 17%;
+    --secondary: 36 44% 50%;
+    --secondary-foreground: 220 40% 17%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 12% 65%;
+    --accent: 220 30% 20%;
+    --accent-foreground: 240 33% 99%;
+    --destructive: 4 72% 50%;
+    --destructive-foreground: 240 33% 99%;
+    --border: 220 30% 25%;
+    --input: 220 30% 25%;
+    --ring: 218 100% 77%;
+    --sidebar-background: 220 35% 12%;
+    --sidebar-foreground: 240 33% 99%;
+    --sidebar-primary: 218 100% 77%;
+    --sidebar-primary-foreground: 220 40% 17%;
+    --sidebar-accent: 220 30% 20%;
+    --sidebar-accent-foreground: 240 33% 99%;
+    --sidebar-border: 220 30% 25%;
+    --sidebar-ring: 218 100% 77%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family:
+      "Pretendard Variable", "Inter", "Apple SD Gothic Neo", sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+/* Display font utility */
+.font-display {
+  font-family: "Noto Serif KR", serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+/* Accessibility (A11y) */
+@layer base {
+  /* 글로벌 포커스 링 통일 (키보드 네비게이션용) */
+  *:focus-visible {
+    outline: 4px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* 사용자가 모션 축소를 요청한 경우 호버 이동 효과나 애니메이션 제거 */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Custom shadows matching spec */
+.shadow-saju-xs {
+  box-shadow: 0 1px 2px 0 rgba(18, 24, 38, 0.07);
+}
+.shadow-saju-sm {
+  box-shadow: 0 4px 12px -4px rgba(18, 24, 38, 0.08);
+}
+.shadow-saju-md {
+  box-shadow: 0 12px 24px -8px rgba(18, 24, 38, 0.12);
+}
+.shadow-saju-lg {
+  box-shadow: 0 24px 48px -12px rgba(18, 24, 38, 0.14);
+}
+
+/* Skeleton animation */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--background)) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.2s ease-in-out infinite;
+}
+
+/* Status badge colors */
+.status-waiting {
+  @apply bg-muted text-muted-foreground;
+}
+.status-progress {
+  @apply bg-blue-50 text-blue-700;
+}
+.status-complete {
+  @apply bg-emerald-50 text-emerald-700;
+}
+.status-review {
+  @apply bg-amber-50 text-amber-700;
+}
+.status-failed {
+  @apply bg-red-50 text-red-700;
+}

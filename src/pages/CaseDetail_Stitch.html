@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saju AI Case Detail Workspace</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e77e23",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211811",
+                        "navy": "#1A2B3C"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-hidden h-screen w-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/10 px-6 py-3 bg-navy text-white flex-shrink-0">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Saju Report Automation</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-6 hidden md:flex">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Cases</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Templates</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Publish PDF</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-9 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Save Draft</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded h-9 w-9 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined text-lg">notifications</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded h-9 w-9 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined text-lg">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-9 w-9 ml-2" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKsH4zIpPJouCQCz_JOMFoIIwFVk52HUyvH3lxg_fuhrO9z5im-B09IjiLX8wBKz903tTJLkhNt1zp4V2V-mYWH-GwTrOoGtM8eackmghUnWEsUyKN7X5p8y0mgwnmrZY_DeBgLBlX2_chitAVaUBmGql9xfqGANkonP7Hbr3jOq0mcWiFmfKDZsb6P8CTqnaOwlrqf6GE8QV92HsCWppExuP8zmMkwNMH3olh4q1uF84N3RKjYuiV4h462rICInj9N18qm8ubKsh1");'></div>
+</div>
+</div>
+</header>
+<!-- Context Header -->
+<div class="flex flex-wrap items-center justify-between gap-3 px-6 py-4 bg-white dark:bg-slate-900 border-b border-primary/10 flex-shrink-0">
+<div class="flex flex-col gap-1">
+<h1 class="text-2xl font-bold leading-tight">Acme Corp - Case #1234</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Case Detail Workspace</p>
+</div>
+<div class="flex border border-primary/10 rounded-lg overflow-hidden bg-background-light dark:bg-slate-800">
+<a class="px-4 py-2 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-primary transition-colors border-r border-primary/10" href="#">Overview</a>
+<a class="px-4 py-2 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-primary transition-colors border-r border-primary/10" href="#">Draft</a>
+<a class="px-4 py-2 text-sm font-bold text-primary bg-primary/5" href="#">Editor</a>
+</div>
+</div>
+<!-- Main Workspace Area -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Column 1: Left (25%) - Information & Data -->
+<aside class="w-1/4 min-w-[280px] border-r border-primary/10 flex flex-col overflow-y-auto bg-background-light dark:bg-slate-900/50 p-4 gap-4">
+<!-- Basic Info Card -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 overflow-hidden shadow-sm">
+<div class="bg-navy h-24 p-4 flex flex-col justify-end relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80')] bg-cover bg-center" data-alt="Abstract subtle gradient background"></div>
+<h3 class="text-white text-lg font-bold relative z-10">Basic Info</h3>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Client</p>
+<p class="text-sm font-medium">Acme Corporation</p>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Assigned Analyst</p>
+<div class="flex items-center gap-2">
+<div class="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">JD</div>
+<p class="text-sm font-medium">Jane Doe</p>
+</div>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Status</p>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">In Progress</span>
+</div>
+</div>
+</div>
+<!-- Raw Data Metrics Card -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 p-4 shadow-sm flex flex-col gap-4">
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">analytics</span>
+                    Data Metrics
+                </h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1 rounded bg-background-light dark:bg-slate-900/50 p-3 border border-primary/5">
+<p class="text-2xl font-bold text-primary">24</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Data Points</p>
+</div>
+<div class="flex flex-col gap-1 rounded bg-background-light dark:bg-slate-900/50 p-3 border border-primary/5">
+<p class="text-2xl font-bold text-primary">12</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Sources</p>
+</div>
+<div class="flex flex-col gap-1 rounded bg-background-light dark:bg-slate-900/50 p-3 border border-primary/5">
+<p class="text-2xl font-bold text-primary">4</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">AI Models</p>
+</div>
+<div class="flex flex-col gap-1 rounded bg-background-light dark:bg-slate-900/50 p-3 border border-primary/5">
+<p class="text-2xl font-bold text-primary">98%</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Confidence</p>
+</div>
+<div class="col-span-2 flex flex-col gap-1 rounded bg-background-light dark:bg-slate-900/50 p-3 border border-primary/5">
+<p class="text-2xl font-bold text-primary">1.2k</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Tokens Used</p>
+</div>
+</div>
+</div>
+<!-- Context Sources -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 p-4 shadow-sm flex-1">
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-sm">folder_open</span>
+                    Source Documents
+                </h3>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-2 text-sm p-2 rounded hover:bg-background-light dark:hover:bg-slate-900/50 cursor-pointer transition-colors border border-transparent hover:border-primary/10">
+<span class="material-symbols-outlined text-red-500 text-lg">picture_as_pdf</span>
+<span class="truncate flex-1">Q3_Financial_Report.pdf</span>
+</li>
+<li class="flex items-center gap-2 text-sm p-2 rounded hover:bg-background-light dark:hover:bg-slate-900/50 cursor-pointer transition-colors border border-transparent hover:border-primary/10">
+<span class="material-symbols-outlined text-green-500 text-lg">table_view</span>
+<span class="truncate flex-1">Client_Data_Export.csv</span>
+</li>
+<li class="flex items-center gap-2 text-sm p-2 rounded hover:bg-background-light dark:hover:bg-slate-900/50 cursor-pointer transition-colors border border-transparent hover:border-primary/10">
+<span class="material-symbols-outlined text-blue-500 text-lg">description</span>
+<span class="truncate flex-1">Meeting_Notes_Oct.docx</span>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Column 2: Center (50%) - Editor -->
+<section class="flex-1 flex flex-col bg-white dark:bg-slate-900 border-r border-primary/10">
+<!-- Editor Toolbar -->
+<div class="flex items-center gap-2 p-2 border-b border-primary/10 bg-background-light dark:bg-slate-900/50 flex-shrink-0">
+<select class="text-sm border-transparent bg-transparent rounded hover:bg-white dark:hover:bg-slate-800 py-1 pl-2 pr-6 focus:ring-0 cursor-pointer">
+<option>Heading 1</option>
+<option>Heading 2</option>
+<option selected="">Normal Text</option>
+</select>
+<div class="w-px h-5 bg-primary/20 mx-1"></div>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"><span class="material-symbols-outlined text-sm">format_bold</span></button>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"><span class="material-symbols-outlined text-sm">format_italic</span></button>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"><span class="material-symbols-outlined text-sm">format_underlined</span></button>
+<div class="w-px h-5 bg-primary/20 mx-1"></div>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"><span class="material-symbols-outlined text-sm">format_list_numbered</span></button>
+<div class="w-px h-5 bg-primary/20 mx-1"></div>
+<button class="p-1.5 rounded hover:bg-white dark:hover:bg-slate-800 text-primary transition-colors flex items-center gap-1 text-xs font-semibold ml-auto border border-primary/20">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    AI Assist
+                </button>
+</div>
+<!-- Editor Canvas -->
+<div class="flex-1 overflow-y-auto p-12 lg:p-16">
+<div class="max-w-3xl mx-auto flex flex-col gap-6">
+<h1 class="text-4xl font-bold text-slate-900 dark:text-white outline-none" contenteditable="true">Acme Corp Strategic Analysis</h1>
+<div class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed outline-none min-h-[50vh]" contenteditable="true">
+<p class="mb-4">Based on the provided Q3 financial data and recent meeting notes, Acme Corporation is positioned for moderate growth in the upcoming fiscal year. The primary driver identified by the analytical model is the expansion of their secondary product line.</p>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">Key Findings</h2>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+<li>Revenue increased by 14% year-over-year in Q3.</li>
+<li>Operational costs were reduced by 3.2% through recent supply chain optimizations.</li>
+<li>Customer retention rate stabilized at 92%, indicating strong product-market fit.</li>
+</ul>
+<div class="p-4 border-l-4 border-primary bg-primary/5 rounded-r my-6 relative group">
+<span class="absolute right-2 top-2 material-symbols-outlined text-primary/50 opacity-0 group-hover:opacity-100 cursor-pointer text-sm transition-opacity">edit</span>
+<p class="italic text-sm text-slate-600 dark:text-slate-400">AI Generated Insight: The reduction in operational costs correlates strongly with the new vendor agreements signed in August. Maintaining these relationships will be critical for Q4 margins.</p>
+</div>
+<p>Moving forward, the recommendation is to allocate 15% of the projected Q4 marketing budget towards targeted digital campaigns focusing on the improved efficiency metrics.</p>
+<!-- Placeholder for typing -->
+<div class="flex items-center gap-2 mt-4 text-slate-400">
+<span class="w-2 h-5 bg-primary animate-pulse"></span>
+<span class="text-sm italic">Type '/' for commands or to use AI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Column 3: Right (25%) - Preview & Timeline -->
+<aside class="w-1/4 min-w-[300px] flex flex-col bg-background-light dark:bg-slate-900/50 overflow-hidden">
+<!-- Document Preview -->
+<div class="h-1/2 p-4 border-b border-primary/10 flex flex-col">
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-3 flex items-center justify-between">
+<span>PDF Preview</span>
+<button class="text-primary hover:text-primary/80"><span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</h3>
+<div class="flex-1 bg-white dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col items-center justify-center relative p-2">
+<!-- Fake PDF Page -->
+<div class="w-full h-full bg-white border border-slate-100 shadow-[0_2px_10px_rgba(0,0,0,0.05)] p-4 flex flex-col gap-2">
+<div class="w-1/2 h-4 bg-slate-200 rounded"></div>
+<div class="w-full h-2 bg-slate-100 rounded mt-4"></div>
+<div class="w-full h-2 bg-slate-100 rounded"></div>
+<div class="w-3/4 h-2 bg-slate-100 rounded"></div>
+<div class="w-full h-20 bg-slate-50 border border-slate-100 rounded mt-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300">bar_chart</span>
+</div>
+</div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-slate-900/5 hover:bg-transparent transition-colors cursor-pointer group flex items-center justify-center">
+<button class="bg-navy text-white px-3 py-1.5 rounded-full text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-xs">refresh</span> Update Preview
+                        </button>
+</div>
+</div>
+</div>
+<!-- AI Timeline -->
+<div class="h-1/2 p-4 flex flex-col overflow-hidden">
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">history</span>
+                    Generation Timeline
+                </h3>
+<div class="flex-1 overflow-y-auto pr-2 relative">
+<!-- Vertical Line -->
+<div class="absolute left-3.5 top-2 bottom-2 w-px bg-primary/20"></div>
+<div class="flex flex-col gap-4 relative z-10">
+<!-- Timeline Item -->
+<div class="flex gap-3">
+<div class="mt-1 flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">edit_document</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800 p-3 rounded-lg border border-primary/5 shadow-sm">
+<p class="text-xs font-semibold mb-1">Manual Edit</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Updated "Key Findings" bullet points.</p>
+<p class="text-[10px] text-slate-400 mt-2">10 mins ago</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex gap-3">
+<div class="mt-1 flex-shrink-0 w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800 p-3 rounded-lg border border-primary/20 shadow-sm relative">
+<div class="absolute top-2 right-2 flex gap-1">
+<button class="text-slate-400 hover:text-green-500 transition-colors"><span class="material-symbols-outlined text-[14px]">thumb_up</span></button>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[14px]">thumb_down</span></button>
+</div>
+<p class="text-xs font-semibold mb-1 text-primary">Insight Generated</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Generated paragraph regarding operational costs and vendor agreements.</p>
+<div class="mt-2 flex gap-2">
+<span class="text-[10px] bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded text-slate-600 dark:text-slate-300">Model: GPT-4</span>
+<span class="text-[10px] bg-slate-100 dark:bg-slate-700 px-1.5 py-0.5 rounded text-slate-600 dark:text-slate-300">Tokens: 154</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-2">15 mins ago</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex gap-3">
+<div class="mt-1 flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">note_add</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800 p-3 rounded-lg border border-primary/5 shadow-sm">
+<p class="text-xs font-semibold mb-1">Initial Draft</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Draft created from Acme Corp template #3.</p>
+<p class="text-[10px] text-slate-400 mt-2">1 hour ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>
